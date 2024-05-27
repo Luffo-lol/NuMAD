@@ -33,7 +33,7 @@ end
 % Read in data from Excel file, NuMAD.xlsx
 try
     [~,sheets]=xlsfinfo(xlsname);
-    [num1,txt1,raw1]=xlsread(xlsname,'materials');
+    [num1,txt1,raw1]=xlsread(xlsname,'materials'); %#ok<*XLSRD>
     [num2,txt2,raw2]=xlsread(xlsname,'geometry');
     if any(strcmpi('bend & sweep',sheets))
         [~,txt3,raw3]=xlsread(xlsname,'bend & sweep');
